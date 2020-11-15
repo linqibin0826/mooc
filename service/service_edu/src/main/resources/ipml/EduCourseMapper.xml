@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linqibin.eduservice.mapper.EduCourseMapper">
+
+    <select id="getPrepublishCourseInfo" resultType="com.linqibin.eduservice.entity.dto.PrepublishCourseInfo">
+        SELECT
+        course.title,
+        cover,
+        price,
+        teacher.name AS teacherName,
+        lesson_num AS lessonNum,
+        edu_subject2.title AS secondarySubject,
+        edu_subject1.title AS primarySubject
+        FROM edu_course AS course
+        LEFT OUTER JOIN edu_teacher teacher ON course.teacher_id = teacher.id
+        LEFT OUTER JOIN edu_subject AS edu_subject1 ON course.subject_id = edu_subject1.id
+        LEFT OUTER JOIN edu_subject AS edu_subject2 ON course.subject_parent_id = edu_subject2.id
+        WHERE course.id = #{courseId};
+    </select>
+
+    <select id="getFrontCourseInfo" resultType="com.linqibin.eduservice.entity.dto.FrontCourseInfo">
+  SELECT
+    course.id,
+    course.title,
+    course.cover,
+    CONVERT(course.price, DECIMAL(8,2)) AS price,
+    course.lesson_num AS lessonNum,
+    course.cover,
+    course.buy_count AS buyCount,
+    course.view_count AS viewCount,
+    cd.description,
+
+    t.id AS teacherId,
+    t.name AS teacherName,
+    t.intro,
+    t.avatar,
+
+    s1.id AS subjectParentId,
+    s1.title AS subjectParentName,
+    s2.id AS subjectId,
+    s2.title AS subjectName
+
+  FROM
+    edu_course course
+    LEFT JOIN edu_course_description cd ON course.id = cd.id
+    LEFT JOIN edu_teacher t ON course.teacher_id = t.id
+    LEFT JOIN edu_subject s1 ON course.subject_parent_id = s1.id
+    LEFT JOIN edu_subject s2 ON course.subject_id = s2.id
+  WHERE
+    course.id = #{id}
+</select>
+</mapper>

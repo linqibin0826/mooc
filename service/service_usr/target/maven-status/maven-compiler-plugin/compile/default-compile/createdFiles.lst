@@ -1,0 +1,9 @@
+com\linqibin\usr\entity\dto\RegisterDTO.class
+com\linqibin\usr\entity\EduUser.class
+com\linqibin\usr\service\EduUserService.class
+com\linqibin\usr\entity\dto\LoginDTO.class
+com\linqibin\usr\entity\dto\LoginInfoDTO.class
+com\linqibin\usr\mapper\EduUserMapper.class
+com\linqibin\usr\controller\EduUserController.class
+com\linqibin\usr\service\impl\EduUserServiceImpl.class
+com\linqibin\usr\UsrApplication.class

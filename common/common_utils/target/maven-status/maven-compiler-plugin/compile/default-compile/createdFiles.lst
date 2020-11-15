@@ -1,0 +1,7 @@
+com\linqibin\commonutils\RandomUtil.class
+com\linqibin\commonutils\MD5.class
+com\linqibin\commonutils\Result.class
+com\linqibin\commonutils\vo\CourseAndOrderVo.class
+com\linqibin\commonutils\vo\UserAndOrderVo.class
+com\linqibin\commonutils\ResultCode.class
+com\linqibin\commonutils\JwtUtils.class
