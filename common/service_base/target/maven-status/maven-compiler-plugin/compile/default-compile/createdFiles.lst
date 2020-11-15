@@ -1,5 +1,0 @@
-com\linqibin\servicebase\handler\MyMetaObjectHandler.class
-com\linqibin\servicebase\exceptionHandler\MyException.class
-com\linqibin\servicebase\config\RedisConfig.class
-com\linqibin\servicebase\config\SwaggerConfig.class
-com\linqibin\servicebase\exceptionHandler\GlobalExceptionHandler.class

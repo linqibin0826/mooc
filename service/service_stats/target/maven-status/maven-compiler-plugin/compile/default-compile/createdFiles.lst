@@ -1,8 +1,0 @@
-com\linqibin\statsservice\service\StatisticsService.class
-com\linqibin\statsservice\controller\StatisticsController.class
-com\linqibin\statsservice\StatsApplication.class
-com\linqibin\statsservice\mapper\StatisticsMapper.class
-com\linqibin\statsservice\feignclient\UserClient.class
-com\linqibin\statsservice\service\impl\StatisticsServiceImpl.class
-com\linqibin\statsservice\entity\Statistics.class
-com\linqibin\statsservice\schedual\UpdateData.class

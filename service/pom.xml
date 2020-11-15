@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>sddm_parent</artifactId>
@@ -15,13 +15,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>service_edu</module>
-        <module>service_oss</module>
-        <module>service_vod</module>
-        <module>service_cms</module>
-        <module>service_usr</module>
-        <module>service_ord</module>
-        <module>service_stats</module>
+        <module>education</module>
+        <module>object_storage_service</module>
+        <module>video_on_demand</module>
+        <module>content_management_system</module>
+        <module>user</module>
+        <module>course_order</module>
+        <module>data_statistics</module>
     </modules>
 
     <dependencies>
@@ -32,13 +32,13 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-<!--      service_base中存在这个依赖了,依赖传递-->
+        <!--      service_base中存在这个依赖了,依赖传递-->
         <!--统一返回JSON对象所在模块-->
-<!--        <dependency>-->
-<!--            <groupId>com.linqibin</groupId>-->
-<!--            <artifactId>common_utils</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.linqibin</groupId>-->
+        <!--            <artifactId>common_utils</artifactId>-->
+        <!--            <version>0.0.1-SNAPSHOT</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -184,7 +184,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-            <scope>true</scope>
         </dependency>
     </dependencies>
 

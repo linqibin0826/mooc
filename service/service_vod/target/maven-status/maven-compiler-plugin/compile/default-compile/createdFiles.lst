@@ -1,6 +1,0 @@
-com\linqibin\vod\VodApplication.class
-com\linqibin\vod\controller\VideoController.class
-com\linqibin\vod\service\impl\VideoServiceImpl.class
-com\linqibin\vod\utils\ConstantPropertiesUtil.class
-com\linqibin\vod\service\VideoService.class
-com\linqibin\vod\utils\AliyunVodSDKUtils.class
