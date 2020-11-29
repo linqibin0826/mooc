@@ -20,7 +20,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/cmsservice/banner")
-@CrossOrigin
 public class BannerControllerForAdmin {
     private BannerService bannerService;
 

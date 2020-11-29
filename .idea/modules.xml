@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/service/course_order/course_order.iml" filepath="$PROJECT_DIR$/service/course_order/course_order.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/data_statistics/data_statistics.iml" filepath="$PROJECT_DIR$/service/data_statistics/data_statistics.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/education/education.iml" filepath="$PROJECT_DIR$/service/education/education.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/object_storage_service/object_storage_service.iml" filepath="$PROJECT_DIR$/service/object_storage_service/object_storage_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sddm_parent.iml" filepath="$PROJECT_DIR$/sddm_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />

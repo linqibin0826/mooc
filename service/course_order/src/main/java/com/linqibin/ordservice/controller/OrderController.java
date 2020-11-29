@@ -20,7 +20,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/ordservice/order")
-@CrossOrigin
 public class OrderController {
 
     private OrderTableService orderService;

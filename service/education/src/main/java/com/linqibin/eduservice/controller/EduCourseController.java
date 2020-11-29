@@ -26,7 +26,6 @@ import java.util.List;
 @SuppressWarnings("ALL")
 @RestController
 @RequestMapping("/eduservice/course")
-@CrossOrigin
 public class EduCourseController {
 
     private EduCourseService eduCourseService;

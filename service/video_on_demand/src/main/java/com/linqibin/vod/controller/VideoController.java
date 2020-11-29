@@ -12,7 +12,6 @@ import java.util.List;
 
 @Api("阿里云视频点播")
 @RestController
-@CrossOrigin
 @RequestMapping("/eduvod/video")
 public class VideoController {
 

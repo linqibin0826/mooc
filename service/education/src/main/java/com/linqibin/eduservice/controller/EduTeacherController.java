@@ -26,7 +26,6 @@ import java.util.List;
  */
 @RestController  //@ResponseBody @Controller @Target
 @RequestMapping("/eduservice/teacher")
-@CrossOrigin
 public class EduTeacherController {
 
     private EduTeacherService teacherService;

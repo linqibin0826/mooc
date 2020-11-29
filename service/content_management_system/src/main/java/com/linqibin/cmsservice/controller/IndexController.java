@@ -22,7 +22,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/cmsservice/index")
-@CrossOrigin
 public class IndexController {
     private IndexService indexService;
 
