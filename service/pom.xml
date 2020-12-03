@@ -15,13 +15,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>education</module>
-        <module>object_storage_service</module>
-        <module>video_on_demand</module>
-        <module>content_management_system</module>
-        <module>user</module>
-        <module>course_order</module>
-        <module>data_statistics</module>
+        <module>cloud_cms</module>
+        <module>cloud_edu</module>
+        <module>cloud_ord</module>
+        <module>cloud_oss</module>
+        <module>cloud_usr</module>
+        <module>cloud_vod</module>
+        <module>cloud_stats</module>
     </modules>
 
     <dependencies>

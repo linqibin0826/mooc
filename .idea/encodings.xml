@@ -4,12 +4,12 @@
     <file url="file://$PROJECT_DIR$/common/common_utils/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/service_base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/content_management_system/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/course_order/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/data_statistics/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/education/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/object_storage_service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/user/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/video_on_demand/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_cms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_edu/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_ord/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_oss/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_stats/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_usr/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/cloud_vod/src/main/java" charset="UTF-8" />
   </component>
 </project>
