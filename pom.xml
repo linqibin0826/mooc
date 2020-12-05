@@ -15,7 +15,7 @@
     </parent>
     <groupId>com.linqibin</groupId>
     <artifactId>sddm_parent</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>sddm_parent</name>
     <description>Demo project for Spring Boot</description>
