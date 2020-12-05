@@ -13,7 +13,6 @@
         <module name="easyExcel" />
         <module name="cloud_ord" />
         <module name="cloud_stats" />
-        <module name="sddm_parent" />
         <module name="untitled1" />
         <module name="cloud_edu" />
         <module name="cloud_usr" />
