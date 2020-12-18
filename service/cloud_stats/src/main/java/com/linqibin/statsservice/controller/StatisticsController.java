@@ -27,6 +27,14 @@ public class StatisticsController {
         this.statsService = statsService;
     }
 
+    /**
+     * Create statistics by date result.
+     *
+     * @param date the date
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 13:13
+     */
     @GetMapping("{date}")
     public Result createStatisticsByDate(@PathVariable String date) {
         statsService.createStatisticsByDate(date);

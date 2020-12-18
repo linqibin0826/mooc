@@ -45,12 +45,27 @@ public class EduSubjectController {
         return Result.ok();
     }
 
+    /**
+     * 获取所有机构
+     *
+     * @return the all subject
+     * @author hugh &you
+     * @since 2020 /12/18 12:20
+     */
     @GetMapping("/getAllSubject")
     public Result getAllSubject() {
         List<PrimarySubject> allSubject = eduSubjectService.getAllSubject();
         return Result.ok().data("allSubject", allSubject);
     }
 
+    /**
+     * 根据父ID查询所有子机构
+     *
+     * @param pid the pid
+     * @return the subjects by pid
+     * @author hugh &you
+     * @since 2020 /12/18 12:21
+     */
     @GetMapping("/getSubjectsByPid/{pid}")
     public Result getSubjectsByPid(@PathVariable String pid) {
         List<EduSubject> subjectsByPid = eduSubjectService.getByPid(pid);

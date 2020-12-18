@@ -33,24 +33,56 @@ public class EduUserController {
         this.userService = userService;
     }
 
+    /**
+     * Gets code.
+     *
+     * @param email the email
+     * @return the code
+     * @author hugh &you
+     * @since 2020 /12/18 13:15
+     */
     @GetMapping("/getCode/{email}")
     public Result getCode(@PathVariable String email) {
         userService.sendSimpleMail(email);
         return Result.ok();
     }
 
+    /**
+     * Login result.
+     *
+     * @param loginDTO the login dto
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 13:15
+     */
     @PostMapping("/login")
     public Result login(@RequestBody LoginDTO loginDTO) {
         String token = userService.login(loginDTO);
         return Result.ok().data("token", token);
     }
 
+    /**
+     * Register result.
+     *
+     * @param registerDTO the register dto
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 13:15
+     */
     @PostMapping("/register")
     public Result register(@RequestBody RegisterDTO registerDTO) {
         userService.register(registerDTO);
         return Result.ok();
     }
 
+    /**
+     * Gets login info.
+     *
+     * @param request the request
+     * @return the login info
+     * @author hugh &you
+     * @since 2020 /12/18 13:15
+     */
     @GetMapping("/getLoginInfo")
     public Result getLoginInfo(HttpServletRequest request) {
         try {
@@ -63,12 +95,28 @@ public class EduUserController {
         }
     }
 
+    /**
+     * Gets user by id.
+     *
+     * @param userId the user id
+     * @return the user by id
+     * @author hugh &you
+     * @since 2020 /12/18 13:15
+     */
     @GetMapping("/getUserById/{userId}")
     public Result getUserById(@PathVariable("userId") String userId) {
         LoginInfoDTO user = userService.getLoginInfo(userId);
         return Result.ok().data("user", user);
     }
 
+    /**
+     * Gets register count.
+     *
+     * @param date the date
+     * @return the register count
+     * @author hugh &you
+     * @since 2020 /12/18 13:16
+     */
     @GetMapping("/getRegisterCount/{date}")
     public Result getRegisterCount(@PathVariable String date) {
         Integer count = userService.getRegisterCount(date);

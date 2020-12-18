@@ -29,7 +29,13 @@ public class IndexController {
         this.indexService = indexService;
     }
 
-
+    /**
+     * Gets banners.
+     *
+     * @return the banners
+     * @author hugh &you
+     * @since 2020 /12/18 12:09
+     */
     @GetMapping("/getBanners")
     public Result getBanners() {
         List<Banner> fourBanners = indexService.getBanners();

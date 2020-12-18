@@ -59,5 +59,13 @@ public interface EduUserService extends IService<EduUser> {
      */
     LoginInfoDTO getLoginInfo(String id);
 
+    /**
+     * Gets register count.
+     *
+     * @param date the date
+     * @return the register count
+     * @author hugh &you
+     * @since 2020 /12/18 13:16
+     */
     Integer getRegisterCount(String date);
 }

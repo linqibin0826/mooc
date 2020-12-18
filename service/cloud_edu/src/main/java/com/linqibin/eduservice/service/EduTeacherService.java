@@ -16,7 +16,22 @@ import java.util.List;
  */
 public interface EduTeacherService extends IService<EduTeacher> {
 
+    /**
+     * Gets hot teacher.
+     *
+     * @return the hot teacher
+     * @author hugh &you
+     * @since 2020 /12/18 13:12
+     */
     List<EduTeacher> getHotTeacher();
 
+    /**
+     * Gets teacher and courses by id.
+     *
+     * @param teacherId the teacher id
+     * @return the teacher and courses by id
+     * @author hugh &you
+     * @since 2020 /12/18 13:12
+     */
     HashMap<String, Object> getTeacherAndCoursesById(String teacherId);
 }

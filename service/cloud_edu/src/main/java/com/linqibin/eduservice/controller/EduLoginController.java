@@ -10,11 +10,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/eduservice/user")
 public class EduLoginController {
 
+    /**
+     * 后台登录, 待完善
+     * TODO
+     *
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 12:15
+     */
     @PostMapping("/login")
     public Result login() {
         return Result.ok().data("token", "admin");
     }
 
+    /**
+     * TODO
+     *
+     * @author hugh&you
+     * @since 2020/12/18 12:20
+     */
     @GetMapping("info")
     public Result info() {
         return Result.ok().data("roles", "[admin]")

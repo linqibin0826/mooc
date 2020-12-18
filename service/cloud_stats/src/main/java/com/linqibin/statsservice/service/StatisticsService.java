@@ -13,5 +13,12 @@ import com.linqibin.statsservice.entity.Statistics;
  */
 public interface StatisticsService extends IService<Statistics> {
 
+    /**
+     * Create statistics by date.
+     *
+     * @param date the date
+     * @author hugh &you
+     * @since 2020 /12/18 13:14
+     */
     void createStatisticsByDate(String date);
 }

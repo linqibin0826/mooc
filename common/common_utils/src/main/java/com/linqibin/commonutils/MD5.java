@@ -3,7 +3,12 @@ package com.linqibin.commonutils;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-
+/**
+ * MD5加密
+ *
+ * @author hugh &you
+ * @since 2020 /12/18 13:40
+ */
 public final class MD5 {
 
     public static String encrypt(String strSrc) {
@@ -27,10 +32,6 @@ public final class MD5 {
             e.printStackTrace();
             throw new RuntimeException("MD5加密出错！！+" + e);
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 
 }

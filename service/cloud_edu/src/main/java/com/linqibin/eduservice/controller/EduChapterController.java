@@ -30,13 +30,12 @@ public class EduChapterController {
     }
 
     /**
-     * 根据课程ID获取对应课程章节信息以及小节信息
+     * Gets chapter and video info by course id.
      *
-     * @param courseId
-     * @return Result
-     * @author linqibin&youmei
-     * @creed: ProjectForSDDM
-     * @date 2020/10/23 9:40
+     * @param courseId the course id
+     * @return the chapter and video info by course id
+     * @author hugh &you
+     * @since 2020 /12/18 12:12
      */
     @GetMapping("/getChapterAndVideoInfoByCourseId/{courseId}")
     public Result getChapterAndVideoInfoByCourseId(@PathVariable String courseId) {
@@ -45,13 +44,12 @@ public class EduChapterController {
     }
 
     /**
-     * 新增章节信息
+     * Save chapter info result.
      *
-     * @param eduChapter
-     * @return Result
-     * @author linqibin&youmei
-     * @creed: ProjectForSDDM
-     * @date 2020/10/23 9:46
+     * @param eduChapter the edu chapter
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 12:12
      */
     @PostMapping("/saveChapterInfo")
     public Result saveChapterInfo(@RequestBody EduChapter eduChapter) {
@@ -59,18 +57,42 @@ public class EduChapterController {
         return Result.ok();
     }
 
+    /**
+     * Gets chapter info by id.
+     *
+     * @param id the id
+     * @return the chapter info by id
+     * @author hugh &you
+     * @since 2020 /12/18 12:11
+     */
     @GetMapping("/getChapterInfoById/{id}")
     public Result getChapterInfoById(@PathVariable String id) {
         EduChapter eduChapter = chapterService.getById(id);
         return Result.ok().data("chapterInfo", eduChapter);
     }
 
+    /**
+     * Update chapter info by id result.
+     *
+     * @param eduChapter the edu chapter
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 12:11
+     */
     @PostMapping("/updateChapterInfoById")
     public Result updateChapterInfoById(@RequestBody EduChapter eduChapter) {
         chapterService.updateById(eduChapter);
         return Result.ok();
     }
 
+    /**
+     * Delete chapter info by id result.
+     *
+     * @param id the id
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 12:11
+     */
     @DeleteMapping("/deleteChapterInfoById/{id}")
     public Result deleteChapterInfoById(@PathVariable String id) {
         chapterService.deleteChapterInfoById(id);

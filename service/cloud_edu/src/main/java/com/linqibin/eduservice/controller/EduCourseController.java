@@ -100,12 +100,29 @@ public class EduCourseController {
         return Result.ok().data("prepublishCourseInfo", prepublishInfo).data("price", prepublishInfo.getPrice());
     }
 
+    /**
+     * 查询所有课程
+     *
+     * @return the all course
+     * @author hugh &you
+     * @since 2020 /12/18 12:12
+     */
     @GetMapping("/getAllCourse")
     public Result getAllCourse() {
         List<EduCourse> courses = eduCourseService.getAllCourse();
         return Result.ok().data("courses", courses);
     }
 
+    /**
+     * 分页查询课程
+     *
+     * @param current   the current
+     * @param limit     the limit
+     * @param condition the condition
+     * @return the courses by condition and page info
+     * @author hugh &you
+     * @since 2020 /12/18 12:13
+     */
     @PostMapping("/getCoursesByConditionAndPageInfo/{current}/{limit}")
     public Result getCoursesByConditionAndPageInfo(@PathVariable Long current,
                                                    @PathVariable Long limit,
@@ -114,6 +131,14 @@ public class EduCourseController {
         return Result.ok().data("courses", courses);
     }
 
+    /**
+     * 删除课程
+     *
+     * @param id the id
+     * @return the result
+     * @author hugh &you
+     * @since 2020 /12/18 12:13
+     */
     @DeleteMapping("/removeCourseById/{id}")
     public Result removeCourse(@PathVariable String id) {
         boolean removeById = eduCourseService.removeCourseInfoById(id);
@@ -124,18 +149,43 @@ public class EduCourseController {
         }
     }
 
+    /**
+     * 前台首页获取热门课程
+     *
+     * @return the hot course
+     * @author hugh &you
+     * @since 2020 /12/18 12:13
+     */
     @GetMapping("/getHotCourse")
     public Result getHotCourse() {
         List<EduCourse> hotCourses = eduCourseService.getHotCourse();
         return Result.ok().data("items", hotCourses);
     }
 
+    /**
+     * Gets computer list.
+     *
+     * @param subjectName the subject name
+     * @return the computer list
+     * @author hugh &you
+     * @since 2020 /12/18 12:14
+     */
     @GetMapping("/getComputerList/{subjectName}")
     public Result getComputerList(@PathVariable(required = true) String subjectName) {
         List<EduCourse> computerList = eduCourseService.getComputerList(subjectName);
         return Result.ok().data("items", computerList);
     }
 
+    /**
+     * Gets courses by front condition.
+     *
+     * @param current         the current
+     * @param limit           the limit
+     * @param courseCondition the course condition
+     * @return the courses by front condition
+     * @author hugh &you
+     * @since 2020 /12/18 12:14
+     */
     @PostMapping("/getCoursesByFrontCondition/{current}/{limit}")
     public Result getCoursesByFrontCondition(@PathVariable Long current, @PathVariable Long limit,
                                              @RequestBody CourseCondition courseCondition) {
@@ -143,7 +193,14 @@ public class EduCourseController {
         return Result.ok().data("data", map);
     }
 
-
+    /**
+     * Gets front course info by id.
+     *
+     * @param courseId the course id
+     * @return the front course info by id
+     * @author hugh &you
+     * @since 2020 /12/18 12:15
+     */
     @GetMapping("/getFrontCourseInfoById/{courseId}")
     public Result getFrontCourseInfoById(@PathVariable String courseId) {
         HashMap<String, Object> info = eduCourseService.getFrontCourseInfoById(courseId);

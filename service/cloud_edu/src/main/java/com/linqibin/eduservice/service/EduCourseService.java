@@ -86,20 +86,44 @@ public interface EduCourseService extends IService<EduCourse> {
     boolean removeCourseInfoById(String id);
 
     /**
-     * 前台首页的8个热门课程(根据viewCount排序)
+     * Gets hot course.
      *
-     * @param
-     * @return java.util.List<EduCourse>
-     * @author linqibin&youmei
-     * @creed: ProjectForSDDM
-     * @date 2020/10/28 20:49
+     * @return the hot course
+     * @author hugh &you
+     * @since 2020 /12/18 12:31
      */
     List<EduCourse> getHotCourse();
 
+    /**
+     * Gets computer list.
+     *
+     * @param subjectName the subject name
+     * @return the computer list
+     * @author hugh &you
+     * @since 2020 /12/18 12:31
+     */
     List<EduCourse> getComputerList(String subjectName);
 
+    /**
+     * Gets list.
+     *
+     * @param current         the current
+     * @param limit           the limit
+     * @param courseCondition the course condition
+     * @return the list
+     * @author hugh &you
+     * @since 2020 /12/18 12:31
+     */
     HashMap<String, Object> getList(Long current, Long limit, CourseCondition courseCondition);
 
+    /**
+     * Gets front course info by id.
+     *
+     * @param id the id
+     * @return the front course info by id
+     * @author hugh &you
+     * @since 2020 /12/18 12:31
+     */
     HashMap<String, Object> getFrontCourseInfoById(String id);
 
 

@@ -222,6 +222,14 @@ public class EduTeacherController {
         return Result.ok().data("items", teachers);
     }
 
+    /**
+     * 根据教师ID获取该教师信息与其课程
+     *
+     * @param teacherId the teacher id
+     * @return the teacher and courses by id
+     * @author hugh &you
+     * @since 2020 /12/18 12:23
+     */
     @GetMapping("/getTeacherAndCoursesById/{teacherId}")
     public Result getTeacherAndCoursesById(@PathVariable String teacherId) {
         HashMap<String, Object> map = teacherService.getTeacherAndCoursesById(teacherId);

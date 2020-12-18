@@ -53,5 +53,13 @@ public interface EduVideoService extends IService<EduVideo> {
      */
     void removeInfoById(String id);
 
+    /**
+     * Gets video source ids by course id.
+     *
+     * @param courseId the course id
+     * @return the video source ids by course id
+     * @author hugh &you
+     * @since 2020 /12/18 13:12
+     */
     List<String> getVideoSourceIdsByCourseId(String courseId);
 }
