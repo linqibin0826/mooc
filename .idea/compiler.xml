@@ -7,34 +7,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloud_cms" />
         <module name="untitled" />
-        <module name="education" />
         <module name="common_utils" />
         <module name="easyExcel" />
-        <module name="video_on_demand" />
-        <module name="content_management_system" />
+        <module name="cloud_ord" />
+        <module name="cloud_stats" />
         <module name="untitled1" />
-        <module name="data_statistics" />
+        <module name="cloud_edu" />
+        <module name="cloud_usr" />
         <module name="service_base" />
-        <module name="course_order" />
-        <module name="object_storage_service" />
-        <module name="user" />
+        <module name="cloud_oss" />
         <module name="gateway" />
+        <module name="cloud_vod" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aliplayer_service" target="1.8" />
+      <module name="cloud_cms" target="1.8" />
+      <module name="cloud_edu" target="1.8" />
+      <module name="cloud_ord" target="1.8" />
+      <module name="cloud_oss" target="1.8" />
+      <module name="cloud_stats" target="1.8" />
+      <module name="cloud_usr" target="1.8" />
+      <module name="cloud_vod" target="1.8" />
       <module name="common" target="1.8" />
       <module name="common_utils" target="1.8" />
-      <module name="content_management_system" target="1.8" />
       <module name="content_service" target="1.8" />
-      <module name="course_order" target="1.8" />
-      <module name="data_statistics" target="1.8" />
       <module name="easyExcel" target="1.8" />
-      <module name="education" target="1.8" />
       <module name="education_service" target="1.8" />
       <module name="gateway" target="1.8" />
-      <module name="object_storage_service" target="1.8" />
       <module name="order_service" target="1.8" />
       <module name="sddm_parent" target="1.8" />
       <module name="service" target="1.8" />
@@ -43,25 +45,25 @@
       <module name="storage_service" target="1.8" />
       <module name="untitled" target="1.8" />
       <module name="untitled1" target="1.8" />
-      <module name="user" target="1.8" />
       <module name="user_service" target="1.8" />
-      <module name="video_on_demand" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aliplayer_service" options="-parameters" />
+      <module name="cloud_cms" options="-parameters" />
+      <module name="cloud_edu" options="-parameters" />
+      <module name="cloud_ord" options="-parameters" />
+      <module name="cloud_oss" options="-parameters" />
+      <module name="cloud_stats" options="-parameters" />
+      <module name="cloud_usr" options="-parameters" />
+      <module name="cloud_vod" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="common_utils" options="-parameters" />
-      <module name="content_management_system" options="-parameters" />
       <module name="content_service" options="-parameters" />
-      <module name="course_order" options="-parameters" />
-      <module name="data_statistics" options="-parameters" />
       <module name="easyExcel" options="-parameters" />
-      <module name="education" options="-parameters" />
       <module name="education_service" options="-parameters" />
       <module name="gateway" options="-parameters" />
-      <module name="object_storage_service" options="-parameters" />
       <module name="order_service" options="-parameters" />
       <module name="sddm_parent" options="-parameters" />
       <module name="service" options="-parameters" />
@@ -70,9 +72,7 @@
       <module name="storage_service" options="-parameters" />
       <module name="untitled" options="-parameters" />
       <module name="untitled1" options="-parameters" />
-      <module name="user" options="-parameters" />
       <module name="user_service" options="-parameters" />
-      <module name="video_on_demand" options="-parameters" />
     </option>
   </component>
 </project>

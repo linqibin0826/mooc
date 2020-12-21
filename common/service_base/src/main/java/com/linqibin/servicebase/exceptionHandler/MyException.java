@@ -8,6 +8,12 @@ import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 自定义异常
+ *
+ * @author hugh &you
+ * @since 2020 /12/18 13:43
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
