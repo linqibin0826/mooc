@@ -16,8 +16,14 @@ import java.util.Date;
  * @date 2020/10/29 16:16
  */
 public class JwtUtils {
-
+    /**
+     * Session 过期时间
+     */
     public static final long EXPIRE = 1000 * 60 * 60 * 24;
+
+    /**
+     * 防伪标识, 哈希标签密钥.
+     */
     public static final String APP_SECRET = "gsaidofjewbntFSD53FSVCFDSCfdse3";
 
     public static String getJwtToken(String id, String nickname){
@@ -46,7 +52,9 @@ public class JwtUtils {
      * @date 2020/10/29 16:18
      */
     public static boolean checkToken(String jwtToken) {
-        if(StringUtils.isEmpty(jwtToken)) return false;
+        if(StringUtils.isEmpty(jwtToken)) {
+            return false;
+        }
         try {
             Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(jwtToken);
         } catch (Exception e) {
@@ -67,7 +75,9 @@ public class JwtUtils {
     public static boolean checkToken(HttpServletRequest request) {
         try {
             String jwtToken = request.getHeader("token");
-            if(StringUtils.isEmpty(jwtToken)) return false;
+            if(StringUtils.isEmpty(jwtToken)) {
+                return false;
+            }
             Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(jwtToken);
         } catch (Exception e) {
             e.printStackTrace();
@@ -86,7 +96,9 @@ public class JwtUtils {
      */
     public static String getIdByJwtToken(HttpServletRequest request) {
         String jwtToken = request.getHeader("token");
-        if(StringUtils.isEmpty(jwtToken)) return "";
+        if(StringUtils.isEmpty(jwtToken)) {
+            return "";
+        }
         Jws<Claims> claimsJws = Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(jwtToken);
         Claims claims = claimsJws.getBody();
         return (String)claims.get("id");
