@@ -33,7 +33,7 @@ public class EduUser implements Serializable {
     @ApiModelProperty(value = "用户邮箱")
     private String email;
 
-    @ApiModelProperty(value = "微信openid")
+    @ApiModelProperty(value = "openid")
     private String openid;
 
     @ApiModelProperty(value = "手机号")

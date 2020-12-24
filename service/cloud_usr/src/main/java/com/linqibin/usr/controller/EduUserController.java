@@ -5,6 +5,7 @@ import com.linqibin.commonutils.JwtUtils;
 import com.linqibin.commonutils.Result;
 import com.linqibin.commonutils.ResultCode;
 import com.linqibin.servicebase.exceptionHandler.MyException;
+import com.linqibin.usr.entity.EduUser;
 import com.linqibin.usr.entity.dto.LoginDTO;
 import com.linqibin.usr.entity.dto.LoginInfoDTO;
 import com.linqibin.usr.entity.dto.RegisterDTO;
@@ -121,6 +122,13 @@ public class EduUserController {
     public Result getRegisterCount(@PathVariable String date) {
         Integer count = userService.getRegisterCount(date);
         return Result.ok().data("item", count);
+    }
+
+    @PostMapping("/updateUser")
+    public Result updateUser(@RequestBody LoginInfoDTO user) {
+        LoginInfoDTO updated = userService.updateUser(user);
+
+        return Result.ok().data("item", updated);
     }
 }
 

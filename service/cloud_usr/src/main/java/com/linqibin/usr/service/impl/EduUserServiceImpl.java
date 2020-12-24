@@ -22,6 +22,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.management.Query;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -155,5 +156,39 @@ public class EduUserServiceImpl extends ServiceImpl<EduUserMapper, EduUser> impl
     public Integer getRegisterCount(String date) {
         Integer count = baseMapper.getRegisterCount(date);
         return count;
+    }
+
+    @Override
+    public EduUser CreateOrUpdateGithubUser(EduUser user) {
+        String openId = user.getOpenid();
+        QueryWrapper<EduUser> wrapper = new QueryWrapper<>();
+        wrapper.eq("openid", openId);
+        EduUser userByOpenId = baseMapper.selectOne(wrapper);
+
+        if(userByOpenId == null){
+            //创建新用户
+            baseMapper.insert(user);
+            EduUser insert = baseMapper.selectOne(wrapper);
+            return insert;
+        }else{
+            //更新用户
+            //baseMapper.update(user, wrapper);
+            EduUser userUpdated = baseMapper.selectOne(wrapper);
+            return userUpdated;
+        }
+    }
+
+    @Override
+    public LoginInfoDTO updateUser(LoginInfoDTO user) {
+        if (StringUtils.isEmpty(user.getId())) {
+            throw new MyException(ResultCode.ERROR, "用户ID不可为空");
+        }
+        EduUser update = new EduUser();
+        BeanUtils.copyProperties(user, update);
+        int updateById = baseMapper.updateById(update);
+        if (updateById <= 0) {
+            throw new MyException(ResultCode.ERROR, "更新用户信息失败!");
+        }
+        return user;
     }
 }

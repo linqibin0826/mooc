@@ -68,4 +68,8 @@ public interface EduUserService extends IService<EduUser> {
      * @since 2020 /12/18 13:16
      */
     Integer getRegisterCount(String date);
+
+    EduUser CreateOrUpdateGithubUser(EduUser user);
+
+    LoginInfoDTO updateUser(LoginInfoDTO user);
 }

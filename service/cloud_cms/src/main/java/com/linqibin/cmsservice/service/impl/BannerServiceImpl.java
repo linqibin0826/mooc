@@ -26,6 +26,7 @@ public class BannerServiceImpl extends ServiceImpl<BannerMapper, Banner> impleme
     public IPage<Banner> pageBanner(Long page, Long limit) {
         Page<Banner> bannerPage = new Page<>(page, limit);
         IPage<Banner> page1 = baseMapper.selectPage(bannerPage, null);
+        page1.setTotal(baseMapper.selectCount(null));
         return page1;
     }
 
